@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Clock Color | Javascript & CSS</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <!--One-->
+            <span class="one active" onclick="changeColor(event)"></span>
+            <i class="one"></i>
+
+            <!--two-->
+            <span class="two" onclick="changeColor(event)"></span>
+            <i class="two"></i>
+
+            <!--tree-->
+            <span class="three" onclick="changeColor(event)"></span>
+            <i class="three"></i>
+
+            <!--Four-->
+            <span class="four" onclick="changeColor(event)"></span>
+            <i class="four"></i>
+
+            <img src="watches.png">
+        </div>
+    </div>
+
+    <!--Javascript-->
+    <script>
+        // redefina e remova a classe ativa primeiro
+        function changeColor(event) {
+            document.querySelectorAll('span.active').forEach(function(item){
+                item.classList.remove('active')
+            })
+            
+            // adicionar classe ativa ao item de menu selecionado
+            event.target.classList.add('active')
+        }
+
+    </script>
+</body>
+</html>
